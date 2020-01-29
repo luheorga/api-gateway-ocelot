@@ -1,0 +1,9 @@
+{
+  "ReRoutes": [
+    {
+      "UpstreamPathTemplate": "/ServicioA/"
+    }],
+  "GlobalConfiguration": {
+    "BaseUrl": "http://localhost:10001"
+  }
+}
