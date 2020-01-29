@@ -1,9 +1,32 @@
 {
   "ReRoutes": [
     {
-      "UpstreamPathTemplate": "/ServicioA/"
-    }],
+      "UpstreamPathTemplate": "/ServicioA/{metodos}",
+      "DownstreamPathTemplate": "/{metodos}",
+      "UpstreamHttpMethod": [ "Get" ],
+      "ReRouteIsCaseSensitive": false,
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5001
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/ServicioB/{metodos}",
+      "DownstreamPathTemplate": "/{metodos}",
+      "UpstreamHttpMethod": [ "Get" ],
+      "ReRouteIsCaseSensitive": false,
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5002
+        }
+      ]
+    }
+  ],
   "GlobalConfiguration": {
-    "BaseUrl": "http://localhost:10001"
   }
 }

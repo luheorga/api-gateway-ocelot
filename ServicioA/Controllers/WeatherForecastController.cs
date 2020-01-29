@@ -34,5 +34,16 @@ namespace ServicioA.Controllers
             })
             .ToArray();
         }
+
+        [HttpGet("/one")]
+        public WeatherForecast GetOne()
+        {
+            return new WeatherForecast
+            {
+                Date = DateTime.Now,
+                Summary = "prueba",
+                TemperatureC = 28
+            };
+        }
     }
 }
